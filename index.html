@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Todo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/todolist.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="max-w-2xl mx-auto">
+    <header class="mb-10">
+      <div class="flex items-center justify-center gap-3 mb-6">
+                <h1
+          class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent"
+        >
+          Pure Todo
+        </h1>
+      </div>
+      <p class="text-center text-gray-500">Minimal. Focused. Effective.</p>
+    </header>
+
+    <main class="space-y-6">
+      <div class="flex gap-4">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="What needs to be done?"
+          class="flex-1 px-4 py-3 border-0 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
+        />
+        <button
+          id="add-btn"
+          class="add-btn px-6 py-3 text-white font-medium rounded-lg shadow"
+        >
+          Add Task
+        </button>
+      </div>
+
+      <div class="flex gap-2 mt-4 justify-center">
+        <button
+          data-filter="all"
+          class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium"
+        >
+          All
+        </button>
+        <button
+          data-filter="active"
+          class="filter-btn px-4 py-2 rounded-lg text-sm font-medium"
+        >
+          Active
+        </button>
+        <button
+          data-filter="completed"
+          class="filter-btn px-4 py-2 rounded-lg text-sm font-medium"
+        >
+          Completed
+        </button>
+      </div>
+
+      <div id="stats" class="text-center text-gray-500 text-sm"></div>
+
+      <div id="task-list" class="space-y-3"></div>
+    </main>
+
+    <footer class="mt-12 text-center text-gray-400 text-sm">
+      <p>Drag tasks to reorder. Click to edit. Double-click to delete.</p>
+    </footer>
+  </body>
+</html>
